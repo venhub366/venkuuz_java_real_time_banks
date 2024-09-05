@@ -1,0 +1,32 @@
+server:
+  port: 9005
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'
+spring:
+  application:
+    name: jt_loans
+  jpa:
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+  datasource:
+    username: loans
+    password: 12345
+    url: jdbc:h2:mem:jt_loansdb
+
+info:
+  app:
+    version: 0.0.1
+    description: Java Express Loans MS
+  contact: +91-7286838838
+
+

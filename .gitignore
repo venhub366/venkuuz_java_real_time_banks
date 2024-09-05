@@ -1,0 +1,40 @@
+# Ignore IntelliJ project files
+.idea/
+*.iml
+*.iws
+
+# Ignore logs
+*.log
+
+# Ignore Maven and Gradle directories
+target/
+out/
+build/
+
+# Ignore compiled Java classes
+*.class
+
+# Ignore JAR and WAR files
+*.jar
+*.war
+
+# Ignore temporary files
+*.tmp
+*.swp
+*~
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore coverage results
+coverage/
+
+# Ignore binary files and cache files
+*.bin
+*.cache
+*.dat
+*.ctxt
+
+# Ignore .env files (if you have environment-specific files)
+.env
