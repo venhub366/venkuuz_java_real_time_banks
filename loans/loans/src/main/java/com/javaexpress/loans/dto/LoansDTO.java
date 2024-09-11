@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 public class LoansDTO {
     private String loanNumber;
     @NotEmpty(message = "Mobile Num for Loan cannot be empty")
-    @Pattern(message = "Enter a valid 10 digit Mobile Number", regexp = "(^$|[0-9]{10})")
+    @Pattern(regexp = "(^$|[0-9]{10})", message = "Enter a valid 10 Digit Mobile Number")
     private String mobileNumber;
     private String loanType;
 
