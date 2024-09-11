@@ -1,6 +1,19 @@
-#spring.application.name=eurekaserver
+server:
+  port: 9001
 spring:
   application:
     name: eurekaserver
 eureka:
-  server:
+  client:
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:9001/eureka/
+    register-with-eureka: false
+  instance:
+    prefer-ip-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"

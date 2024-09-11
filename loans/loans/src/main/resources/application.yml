@@ -29,4 +29,11 @@ info:
     description: Java Express Loans MS
   contact: +91-7286838838
 
-
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:9001/eureka/
+  instance:
+    prefer-ip-address: true

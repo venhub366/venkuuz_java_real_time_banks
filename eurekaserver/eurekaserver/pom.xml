@@ -12,7 +12,7 @@
 	<artifactId>eurekaserver</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>eurekaserver</name>
-	<description>eurekaserver project for Spring Boot</description>
+	<description>eureka server project for Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
