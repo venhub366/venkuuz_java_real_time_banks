@@ -5,7 +5,7 @@ import com.javaexpress.accounts.dto.CustomerDTO;
 import com.javaexpress.accounts.entities.Accounts;
 import com.javaexpress.accounts.entities.Customer;
 import com.javaexpress.accounts.repository.AccountsRepo;
-import com.javaexpress.accounts.repository.CusotmerRepo;
+import com.javaexpress.accounts.repository.CustomerRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,7 @@ public class AccountsServiceImpl implements AccountsService {
     private AccountsRepo accountsRepo;
 
     @Autowired
-    private CusotmerRepo cusotmerRepo;
+    private CustomerRepo cusotmerRepo;
 
     public void createAccount(CustomerDTO dto) {
 
@@ -39,6 +39,7 @@ public class AccountsServiceImpl implements AccountsService {
 
         Optional<Customer> optioanl = cusotmerRepo.findByMobileNumber(dto.getMobileNumber());
         if (optioanl.isPresent()) {
+
             throw new RuntimeException("Customer Already Exixists with the given number");
         }
         Customer db_Customer = cusotmerRepo.save(customer);
